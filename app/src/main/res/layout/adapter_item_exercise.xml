@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.sun.training.ut.data.model.Exercise" />
+        <variable
+            name="listener"
+            type="com.sun.training.ut.ui.home.HomeItemClickListener" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:onClick="@{v -> listener.onHomeItemClicked(item)}"
+            android:padding="16dp"
+            android:text="@{item.title}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Exercise 1"/>
+    </LinearLayout>
+</layout>

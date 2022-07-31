@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.sun.training.ut.ui.exercise_eight.ExerciseEightViewModel" />
+
+        <import type="com.sun.training.ut.data.Constant.Gender" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

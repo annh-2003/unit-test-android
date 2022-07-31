@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Ex10Label" parent="Widget.AppCompat.TextView">
+        <item name="android:minHeight">@dimen/dp_40</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+</resources>

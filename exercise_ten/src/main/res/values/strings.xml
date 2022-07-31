@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ex_10_user_information">Thông tin hội viên</string>
+    <string name="ex_10_user_label">Xin chào</string>
+    <string name="ex_10_user_name_default">Bach Ngoc Hoai</string>
+    <string name="ex_10_member_label">Hội viên</string>
+    <string name="ex_10_class_type_gold">Hạng Vàng</string>
+    <string name="ex_10_class_type_black">Hạng Đen</string>
+    <string name="ex_10_class_type_silver">Hạng Bạc</string>
+    <string name="ex_10_class_type_unknown">Không phải hội viên</string>
+    <string name="ex_10_service_information_title">Thông tin dịch vụ</string>
+    <string name="ex_10_price_label">Nhập số tiền</string>
+    <string name="ex_10_price">0</string>
+    <string name="ex_10_payment">Thanh toán</string>
+    <string name="ex_10_invoice_title">Hoá đơn thanh toán</string>
+    <string name="ex_10_invoice_gift_title">Nhận quà</string>
+    <string name="ex_10_invoice_gift_message">Chúc mừng bạn đã nhận được món quà.\nCảm ơn bạn đã sử dụng dịch vụ của chúng tôi</string>
+    <string name="ex_10_invoice_information" formatted="false">Khách hàng: %s\nHội viên hạng: %s\nDịch vụ: %.2f円\nGiảm giá dịch vụ: %.2f円\n--------------------------------------\nSố tiền cần thanh toán: %.2f円\n
+    </string>
+
+    <string name="ex_10_information" formatted="false">
+        ◎Exercise \n
+        Tại nhà hàng Nam Từ Liêm đang áp dụng chế độ hội viên hình thức thẻ prepaid card.\n
+        ---\n
+        ●Điều kiện tiên quyết：\n
+        ①：Thứ hạng của hội viên được chia thành 3 cấp ứng với số lần sử dụng nhà hàng.\n
+        ②：Tuỳ theo số tiền thanh toán trên thẻ prepaid card, các bonus đặc quyền thanh toán với tỷ lệ khác nhau sẽ được cấp cho hội viên.\n
+        ③：Thứ hạng hội viên và điều kiện cấp bonus đặc quyền theo như bên dưới:\n
+        Hạng bạc	Bonus\n
+         Số tiền thanh toán 3,000円/ yên	Giảm 1%\n
+         Số tiền thanh toán 5,000円/yên	Giảm 2%\n
+         Số tiền thanh toán 10,000円/yên	Giảm 4%\n\n
+
+        Hạng vàng 	Bonus\n
+         Số tiền thanh toán 3,000円/ yên	Giảm 3%\n
+         Số tiền thanh toán 5,000円/yên	Giảm 5%\n
+         Số tiền thanh toán 10,000円/yên	Giảm 10%\n\n
+
+        Hạng đen	Bonus\n
+         Số tiền thanh toán 3,000円/ yên	Giảm 5%\n
+         Số tiền thanh toán 5,000円/yên	Giảm 7%\n
+         Số tiền thanh toán 10,000円/yên	Giảm 15%\n\n
+
+        ④：Mỗi lần có thanh toán 5,000 hoặc 10,000円/yên, sẽ có 1 lần bốc thăm\n
+        Theo 1 tỷ lệ nhất định sẽ có trúng giải và phát hành coupon giảm giá.\n
+        ---\n
+        Hãy tham khảo các điều kiện bên trên và viết ra các unit test case tối thiểu nhất bạn có thể nghĩ được trong trường hợp bạn đang implement chương trình đó.\n
+    </string>
+</resources>

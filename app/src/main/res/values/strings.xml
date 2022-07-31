@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">Training Unit Test</string>
+
+
+    <string name="calculate">Tính</string>
+    <string name="total_bill">Tổng tiền</string>
+    <string name="total_fee">Phí rút tiền</string>
+    <string name="condition">①：Thông thường giá 1 cốc bia là 490円/yên\n②：Từ 16:00 đến17:59 là thời gian ưu đãi nên giá 1 cốc là 290円/yên.\n③：Nếu có voucher giảm giá thì được ưu đãi cốc đầu tiên là 100 円/yên, bất kể thời gian nào.\n④：Voucher giảm giá được sử dụng kể cả trong thời gian ưu đãi\n⑤：Tính theo giá rẻ nhất vào thời điểm order</string>
+    <string name="condition2">● Điều kiện tiên quyết：\n
+①：Ngày thường từ 0:00～8:44, phí là 110円/yên. \n
+②：Ngày thường từ 8:45～17:59, phí là 0円/yên. \n
+③：Ngày thường từ 18:00～23:59, phí là 110円/yên. \n
+④：Thứ 7, chủ nhật, ngày nghỉ lễ phí cho tất cả các khung giờ là 110円/yên. \n
+⑤：Khách hàng đáp ứng các tiêu chí đặc thù (khách vip) , phí là 0円/yên.
+⑥：Điều kiện được ưu tiên cao nhất là "Khách hàng đáp ứng các tiêu chí đặc thù (khách vip) , phí là 0円/yên \n".
+
+</string>
+    <string name="header_condition">Điều kiện</string>
+    <string name="default_price">490円/yên</string>
+    <string name="name_price">Giá bia:</string>
+    <string name="time_discount">Đang trong thời gian ưu đãi:</string>
+    <string name="use_voucher">Sử dụng voucher giảm giá:</string>
+    <string name="vip">Khách hàng đáp ứng tiêu chí đặt thù:</string>
+    <string name="total_beer">Nhập số cốc bia</string>
+    <string name="name_beer">Số cốc bia đã uống:</string>
+
+    <!--    exercise six-->
+    <string name="exercise_six_total_money">Tổng tiền mua sắm</string>
+    <string name="exercise_six_total_money_hint">Nhập tổng tiền</string>
+    <string name="exercise_six_watch_movie">Xem phim</string>
+    <string name="exercise_six_free_parking_minute">Thời gian gửi xe miễn phí</string>
+    <string name="exercise_six_condition">①：Trường hợp tổng số tiền mua sắm từ 2,000円/yên trở lên, miễn phí phí gửi xe trong 60 phút.\n②：Trường hợp tổng số tiền mua sắm từ 5,000円/yên trở lên, miễn phí gửi xe trong 120 phút. \n③：Nếu khách hàng có xem phim, miễn phí gửi xe thêm 180 phút, cộng bổ sung vào cùng với tổng số tiền mua sắm.</string>
+
+    <!--Text use for exercise 9-->
+    <string name="magic_wand">Đũa phép</string>
+    <string name="master">Quân sư</string>
+    <string name="room_key">Chìa khóa</string>
+    <string name="light_sword">Kiếm ánh sáng</string>
+    <string name="go">Đánh Boss</string>
+    <string name="can_not_find_room">Bạn không có công cụ đũa phép hoặc quân sư thì còn lâu mới tìm được phòng có Boss ( ͡🔥 ͜ʖ ͡🔥)</string>
+    <string name="can_not_go_room">Bạn không có chìa khóa bóng đêm thì chỉ có thể đứng ngoài phòng nhìn Boss thôi à ( ͡🔥 ⏏ ͡🔥)</string>
+    <string name="can_not_beat_boss">Bạn không có kiếm ánh sáng  thì còn lâu bạn mới đánh nổi Boss, chúc mừng bạn nhận được một trận đòn sấp mặt từ Boss 👋≧◉ᴥ◉≦</string>
+    <string name="beat_boss">Chúc mừng! Bạn vừa đánh bại Boss và trở thành thiên hạ đệ nhất kiếm ( ͡❛ ͜ʖ ͡❛)✊</string>
+    <string name="exercise_9_title">Exercise 9\nHanoi quest</string>
+    <string name="exercise_nine_condition">①：Để tìm được căn phòng nơi có Big Boss, cần mang theo công cụ là "Đũa phép" hoặc là cần có "Quân sư" làm bạn đồng hành\n②：Khi vào trong phòng có Big Boss , cần mang theo công cụ là "Chìa khoá bóng đêm".\n③：Để đánh bại Big Boss, dũng sĩ Bánh Mì cần phải mang theo vũ khí là "Kiếm ánh sáng" </string>
+
+    <!--Text use for exercise 7-->
+    <string name="condition_7">①：Phí vận chuyển thông thường là 500円/yên.\n②：Trường hợp tổng số tiền mua hàng trên 5,000円/yên, miễn phí vận chuyển thông thường (Trên tức là >=5000 yên)\n③：Trường hợp chọn "Giao hàng siêu tốc" (Lựa chọn vận chuyển nhanh hơn thông thường), phí vận chuyển tính thêm 500円/yên.\n④：Với các thành viên premium, bất kể số tiền mua hàng là bao nhiêu cũng được miễn phí vận chuyển thông thường.\nTrường hợp chọn "Giao hàng siêu tốc", được miễn phí vận chuyển thông thường nhưng bị tính thêm phí vận chuyển siêu tốc.\n⑤：Phí vận chuyển được tính là tổng của phí vận chuyển thông thường và phí vận chuyển siêu tốc.\</string>
+    <string name="total_pee">Fee</string>
+
+    <!--    For exercise 8-->
+    <string name="age">Age:</string>
+    <string name="gender">Gender:</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="day_of_week">Day of Week:</string>
+    <string name="fee">Fee:</string>
+
+    <!--Text use for exercise 5-->
+    <string name="condition_5">
+        ●Điều kiện tiên quyết：\n
+①：Trường hợp tổng hoá đơn trên 1,500円/yên thì được miễn phí khoai tây chiên.\n
+②：Trường hợp đến lấy tại cửa hàng thì được miễn phí pizza thứ 2.\n
+③：Trường hợp giao đến nhà và có coupon giảm giá thì được giảm 20% tổng hoá đơn.\n
+    </string>
+
+    <!--Text use for exercise 3-->
+    <string name="condition_3" formatted="false">
+        Điều kiện tiên quyết：\n
+①：Trong số các mặt hàng mua, có cả áo sơ mi trắng và cà vạt, thì sẽ được giảm 5% trên tổng hoá đơn.  \n
+②：Trường hợp mua từ trên 7 mặt hàng, được giảm 7% trên tổng hoá đơn. \n
+③：Có thể áp dụng đồng thời ưu đãi ① và ②, tức là sẽ được giảm 12% trên tổng hoá đơn.\n
+④：Thứ tự ưu tiên về logic áp dụng giảm giá như bên dưới:\n
+・Có mua từ 7 mặt hàng trở lên hay không? \n
+・Có bao gồm áo sơ mi trắng hay không? \n
+・Có bao gồm cà vạt hay không? \n
+    </string>
+    <string name="total_discount">Giảm giá</string>
+
+    <!--Text use for exercise 4-->
+    <string name="color">Màu sắc</string>
+    <string name="condition_4">●Điều kiện tiên quyết：\n
+        ①：Ngày lễ thì chuyển thành màu đỏ.\n
+        ②：Chủ nhật thì chuyển thành màu đỏ.\n
+        ③：Thứ 7 không phải là ngày lễ thì để màu xanh lam.\n
+        ④：Ngày thường không phải là ngày lễ thì để màu đen.\n
+        ⑤：Các trường hợp mâu thuẫn với điều kiện, không cần tham khảo dưới dạng test case.\n
+        ※Ngày lễ：Ngày lễ, ngày nghỉ của quốc gia (ngày nghỉ bù hoặc là ngày nghỉ quốc gia)\n
+        ※Ngày thường：Thứ 2～Thứ 6\n
+        Hãy tham khảo các điều kiện bên trên và viết ra các unit test case tối thiểu nhất bạn có thể nghĩ được trong trường hợp bạn đang implement chương trình đó.</string>
+
+    <string name="title_exercise_ten">Exercise Ten</string>
+    <string name="title_exercise_10">Exercise 10</string>
+</resources>

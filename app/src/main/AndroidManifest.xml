@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sun.training.ut">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.home.HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.exercise_one.ExerciseOneActivity"/>
+        <activity android:name=".ui.exercise_two.ExerciseTwoActivity" />
+        <activity android:name=".ui.exercise_three.ExerciseThreeActivity"/>
+        <activity android:name=".ui.exercise_four.ExerciseFourActivity"/>
+        <activity android:name=".ui.exercise_five.ExerciseFiveActivity" />
+        <activity android:name=".ui.excercise_six.ExerciseSixActivity"/>
+        <activity android:name=".ui.exercise_seven.ExerciseSevenActivity"/>
+        <activity android:name=".ui.exercise_eight.ExerciseEightActivity"/>
+        <activity android:name=".ui.exercise_nine.ExerciseNineActivity" />
+    </application>
+
+</manifest>

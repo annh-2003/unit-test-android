@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="member">
+        <item>@string/ex_10_class_type_unknown</item>
+        <item>@string/ex_10_class_type_silver</item>
+        <item>@string/ex_10_class_type_gold</item>
+        <item>@string/ex_10_class_type_black</item>
+    </string-array>
+</resources>
