@@ -8,13 +8,93 @@
             type="com.sun.training.ut.ui.exercise_one.ExerciseOneViewModel" />
     </data>
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context=".ExerciseOneActivity">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_8"
+                android:text="@string/condition" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_20"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/dp_8"
+                android:text="@string/order_time" />
+
+            <TimePicker
+                android:id="@+id/pickerTimeOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="@dimen/dp_150"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_20"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/dp_8"
+                    android:text="@string/voucher" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchIsHaveVoucher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    style="@style/TextAppearance.AppCompat.Widget.Switch" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="@dimen/dp_150"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_20"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/dp_8"
+                    android:text="@string/bears_num" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/inputBearsNumber"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="6"
+                    style="@style/Widget.AppCompat.EditText" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCalculate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/total_bill" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/sp_20"
+                android:text="@{viewModel.bill(viewModel.total)}" />
+        </LinearLayout>
+
+    </ScrollView>
 </layout>

@@ -1,5 +1,6 @@
 package com.sun.training.ut.ui.exercise_one
 
+import android.os.Build
 import android.os.Bundle
 import com.sun.training.ut.BR
 import com.sun.training.ut.R
@@ -16,5 +17,23 @@ class ExerciseOneActivity : BaseActivity<ActivityExerciseOneBinding, ExerciseOne
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewBinding.lifecycleOwner = this
+        viewBinding.apply {
+            pickerTimeOrder.setIs24HourView(true)
+            btnCalculate.setOnClickListener {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    viewModel?.calculatorTotalAmount(
+                        hour = pickerTimeOrder.hour,
+                        voucher = switchIsHaveVoucher.isChecked,
+                        beersAmount = inputBearsNumber.text.toString().toIntOrNull() ?: 0
+                    )
+                } else {
+                    viewModel?.calculatorTotalAmount(
+                        hour = pickerTimeOrder.currentHour,
+                        voucher = switchIsHaveVoucher.isChecked,
+                        beersAmount = inputBearsNumber.text.toString().toIntOrNull() ?: 0
+                    )
+                }
+            }
+        }
     }
 }
