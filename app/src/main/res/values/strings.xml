@@ -91,4 +91,17 @@
 
     <string name="title_exercise_ten">Exercise Ten</string>
     <string name="title_exercise_10">Exercise 10</string>
+
+    <string name="title_choose_day_of_week">Chọn một ngày trong tuần:</string>
+    <string name="title_input_age">Nhập số tuổi: </string>
+    <string name="condition_8">"●Điều kiện tiên quyết
+        ①：Về cơ bản phí vào sân là 1800 円/yên
+        ②：Trẻ em chưa đủ 13 tuổi, phí vào sân tính bằng nửa giá.
+        ③：Người trên 65 tuổi, phí vào sân là 1600 円/yên
+        ④：Chị em phụ nữ sử dụng dịch vụ vào thứ 6, phí vào sân là 1400 円/yên
+        ⑤：Không phân biệt giới tính, tuổi tác, người sử dụng dịch vụ vào thứ 3, phí vào sân là 1200 円/yên \n
+        ●Những điều kiện khác：
+        ・Độ tuổi của người dùng là \"tối thiểu 0 tuổi, tối đa là 120 tuổi\".
+        ・Nếu không nằm trong phạm vi đó thì đó được coi là \"Error\".
+        ・Nếu các điều kiện giảm giá phí vào sân bị trùng nhau, ưu tiên chọn mức phí rẻ nhất. "</string>
 </resources>

@@ -98,4 +98,8 @@ object Constant {
         BLUE,
         BLACK
     }
+
+    //Exercise 8:
+    const val AGE_VALID_MIN = 0
+    const val AGE_VALID_MAX = 120
 }

@@ -16,7 +16,7 @@ class DayOfWeekAdapter(
 ) : RecyclerView.Adapter<BaseViewHolder<ViewDataBinding>>() {
 
     var listItem: ArrayList<String>? = null
-    var currentItem: Int = -1
+    var currentItem: Int = 0 // modify to default is monday
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
