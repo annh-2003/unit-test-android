@@ -78,6 +78,7 @@ android {
 }
 
 dependencies {
+    androidTestImplementation project(path: ':exercise_ten')
     implementation project(":app")
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -137,6 +138,8 @@ dependencies {
 
     testImplementation "org.robolectric:robolectric:4.4"
     androidTestImplementation project(path: ':exercise_ten')
+    testImplementation "androidx.test:core-ktx:1.4.0"
+    androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
 
     testRuntimeOnly(files("$projectDir/../app/build/intermediates/app_classes/developDebug/classes.jar"))
 }

@@ -28,7 +28,7 @@ class ExerciseSixViewModelTest {
     }
 
     @Test
-    fun calculateParkingFreeTime_PurchasedNull_Zero(){
+    fun parkingFreeTime_PurchasedNull_Zero(){
         viewModel.apply {
             purchased = null
             calculateParkingFreeTime()
@@ -37,7 +37,7 @@ class ExerciseSixViewModelTest {
     }
 
     @Test
-    fun calculateParkingFreeTime_PurchasedLessThan2000_DontWatchMovie_Zero(){
+    fun parkingFreeTime_PurchasedLessThan2000_DontWatchMovie_Zero(){
         viewModel.apply {
             purchased = 1999
             calculateParkingFreeTime()
@@ -46,7 +46,7 @@ class ExerciseSixViewModelTest {
     }
 
     @Test
-    fun calculateParkingFreeTime_PurchasedLessThan2000_WatchMovie_180(){
+    fun parkingFreeTime_PurchasedLessThan2000_WatchMovie_180(){
         viewModel.apply {
             purchased = 1999
             isWatchMovie = true
@@ -56,7 +56,7 @@ class ExerciseSixViewModelTest {
     }
 
     @Test
-    fun calculateParkingFreeTime_PurchasedGreaterThan2000AndLessThan5000_DontWatchMovie_60(){
+    fun parkingFreeTime_PurchasedGreaterThan2000AndLessThan5000_DontWatchMovie_60(){
         viewModel.apply {
             purchased = 3000
             calculateParkingFreeTime()
@@ -65,7 +65,7 @@ class ExerciseSixViewModelTest {
     }
 
     @Test
-    fun calculateParkingFreeTime_PurchasedGreaterThan2000AndLessThan5000_WatchMovie_240(){
+    fun parkingFreeTime_PurchasedGreaterThan2000AndLessThan5000_WatchMovie_240(){
         viewModel.apply {
             purchased = 3000
             isWatchMovie = true
@@ -75,7 +75,7 @@ class ExerciseSixViewModelTest {
     }
 
     @Test
-    fun calculateParkingFreeTime_PurchasedGreaterThan5000_DontWatchMovie_120(){
+    fun parkingFreeTime_PurchasedGreaterThan5000_DontWatchMovie_120(){
         viewModel.apply {
             purchased = 5001
             calculateParkingFreeTime()
@@ -84,7 +84,7 @@ class ExerciseSixViewModelTest {
     }
 
     @Test
-    fun calculateParkingFreeTime_PurchasedGreaterThan5000_WatchMovie_300(){
+    fun parkingFreeTime_PurchasedGreaterThan5000_WatchMovie_300(){
         viewModel.apply {
             isWatchMovie = true
             purchased = 5001

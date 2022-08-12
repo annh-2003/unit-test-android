@@ -2,7 +2,7 @@
 <resources>
     <string name="ex_10_user_information">Thông tin hội viên</string>
     <string name="ex_10_user_label">Xin chào</string>
-    <string name="ex_10_user_name_default">Bach Ngoc Hoai</string>
+    <string name="ex_10_user_name_default">Tran Quang Loc</string>
     <string name="ex_10_member_label">Hội viên</string>
     <string name="ex_10_class_type_gold">Hạng Vàng</string>
     <string name="ex_10_class_type_black">Hạng Đen</string>
