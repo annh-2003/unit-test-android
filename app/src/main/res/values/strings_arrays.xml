@@ -9,4 +9,16 @@
         <item>Saturday</item>
         <item>Sunday</item>
     </string-array>
+
+    <string-array name="type_delivery">
+        <item>Delivery</item>
+        <item>Receive At Store</item>
+    </string-array>
+
+    <string-array name="type_coupon">
+        <item>Potato promotion</item>
+        <item>Sale off bill with 20%</item>
+        <item>Free pizza second</item>
+        <item>Regular fee</item>
+    </string-array>
 </resources>
