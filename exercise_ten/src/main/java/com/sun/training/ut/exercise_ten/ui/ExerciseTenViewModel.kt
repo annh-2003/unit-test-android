@@ -14,5 +14,5 @@ import com.sun.training.ut.exercise_ten.util.SingleLiveData
 import com.sun.training.ut.ui.base.BaseViewModel
 
 class ExerciseTenViewModel constructor(private val resources: Resources) : BaseViewModel() {
-
+    var a = 10
 }
