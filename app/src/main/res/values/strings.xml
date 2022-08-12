@@ -91,4 +91,19 @@
 
     <string name="title_exercise_ten">Exercise Ten</string>
     <string name="title_exercise_10">Exercise 10</string>
+    <string name="question">Khi sử dụng ATM của ngân hàng Việt Nam, phí rút tiền từ ATM sẽ thay đổi theo các điều kiện dưới đây:</string>
+    <string name="paid_fee">Phí rút tiền: %d</string>
+    <string name="vip_member">Vip Member</string>
+    <string name="pick_date_and_time">Chọn ngày và thời gian</string>
+    <string name="total_price">Tổng tiền: %d</string>
+    <string name="total_pizza">Số pizza nhận: %d</string>
+    <string name="coupon">Có coupon</string>
+    <string name="at_store">Giao tại cửa hàng</string>
+    <string name="pizza">Nhập giá pizza</string>
+    <string name="fill_pizza">Nhập số lượng pizza</string>
+    <string name="free">Được khuyến mãi khoai tây</string>
+    <string name="mienphi">Được miễn phí pizza thứ 2</string>
+    <string name="time">Thời gian chọn: %s</string>
+    <string name="date">Ngày chọn: %s</string>
+
 </resources>

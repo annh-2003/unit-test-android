@@ -6,6 +6,10 @@
     <data>
 
         <variable
+            name="VIEW"
+            type="android.view.View" />
+
+        <variable
             name="viewModel"
             type="com.sun.training.ut.ui.exercise_five.ExerciseFiveViewModel" />
     </data>
@@ -16,6 +20,138 @@
         android:layout_height="match_parent"
         tools:context=".ExerciseOneActivity">
 
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/condition_5"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/tvPizza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fill_pizza"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <EditText
+            android:id="@+id/edPizzaNum"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="@id/tvPizza"
+            app:layout_constraintStart_toEndOf="@id/tvPizza"
+            app:layout_constraintTop_toTopOf="@id/tvPizza" />
+
+        <TextView
+            android:id="@+id/tvPizzaPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/pizza"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPizza" />
+
+        <EditText
+            android:id="@+id/edPizzaPrice"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="@id/tvPizzaPrice"
+            app:layout_constraintStart_toEndOf="@id/tvPizzaPrice"
+            app:layout_constraintTop_toTopOf="@id/tvPizzaPrice" />
+
+        <TextView
+            android:id="@+id/tvAtStore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="@string/at_store"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPizzaPrice" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:checked="@={viewModel.atStore}"
+            app:layout_constraintBottom_toBottomOf="@id/tvAtStore"
+            app:layout_constraintStart_toEndOf="@id/tvAtStore"
+            app:layout_constraintTop_toTopOf="@id/tvAtStore" />
+
+        <TextView
+            android:id="@+id/tvCoupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="@string/coupon"
+            android:textSize="@dimen/sp_20"
+            android:visibility="@{!viewModel.atStore ? VIEW.VISIBLE : VIEW.GONE}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAtStore" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:checked="@={viewModel.haveCoupon}"
+            android:visibility="@{!viewModel.atStore ? VIEW.VISIBLE : VIEW.GONE}"
+            app:layout_constraintBottom_toBottomOf="@id/tvCoupon"
+            app:layout_constraintStart_toEndOf="@id/tvCoupon"
+            app:layout_constraintTop_toTopOf="@id/tvCoupon" />
+
+        <TextView
+            android:id="@+id/tvTotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="@{@string/total_price(viewModel.calPrice)}"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCoupon"
+            tools:text="Tổng tiền: " />
+
+        <TextView
+            android:id="@+id/tvTotalPizza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="@{@string/total_pizza(viewModel.totalPizza)}"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTotalPrice"
+            tools:text="Số pizza nhận:" />
+
+        <TextView
+            android:id="@+id/tvKhoaitay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="@string/free"
+            android:textColor="@color/red"
+            android:textSize="@dimen/sp_20"
+            android:visibility="@{viewModel.freeCorn ? VIEW.VISIBLE : VIEW.GONE}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTotalPizza" />
+
+        <TextView
+            android:id="@+id/tvMienphi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="@string/mienphi"
+            android:textColor="@color/red"
+            android:textSize="@dimen/sp_20"
+            android:visibility="@{viewModel.atStore ? VIEW.VISIBLE : VIEW.GONE}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvKhoaitay" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
