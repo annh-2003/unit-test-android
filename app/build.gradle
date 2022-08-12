@@ -8,13 +8,13 @@ def keystorePropertiesFile = rootProject.file("keystore.properties")
 def keystoreProperties = new Properties()
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 32
     buildToolsVersion "29.0.2"
 
     defaultConfig {
         applicationId "com.sun.training.ut"
         minSdkVersion 19
-        targetSdkVersion 29
+        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
 
@@ -100,6 +100,7 @@ dependencies {
     implementation "androidx.core:core-ktx:$core_ktx_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
     testImplementation "junit:junit:$junit_version"
+    testImplementation project(path: ':app')
     androidTestImplementation "androidx.test.ext:junit:$ext_junit_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_core_version"
 
@@ -142,4 +143,7 @@ dependencies {
 
     // For Kotlin users also import the Kotlin extensions library for Play Core:
     implementation 'com.google.android.play:core-ktx:1.8.1'
+
+    //sdp
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
 }
