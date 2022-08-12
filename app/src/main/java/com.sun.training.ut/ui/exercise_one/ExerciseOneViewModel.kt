@@ -8,11 +8,11 @@ class ExerciseOneViewModel : BaseViewModel() {
 
     val total = MutableLiveData<Int>()
 
-    fun bill(price: Int?) =
-        if (price == null) ""
-        else if (price < 0) "Error"
-        else if (price == 0) "Free"
-        else "Cái giá phải trả: ${price.formatNumberPrice()}"
+    fun bill(payAmount: Int?) =
+        if (payAmount == null) ""
+        else if (payAmount < 0) "Error"
+        else if (payAmount == 0) "Free"
+        else "Cái giá phải trả: ${payAmount.formatNumberPrice()}"
 
     fun calculatorTotalAmount(
         hour: Int,

@@ -12,42 +12,42 @@ class ExerciseOneViewModelTest {
     @JvmField
     val instantTaskExecutorRule = InstantTaskExecutorRule()
 
-    private lateinit var vm: ExerciseOneViewModel
+    private lateinit var viewModel: ExerciseOneViewModel
 
     @Before
     fun setup() {
-        vm = ExerciseOneViewModel()
+        viewModel = ExerciseOneViewModel()
     }
 
     @Test
-    fun `call bill with price null return empty`() {
-        val price = null
-        val result = vm.bill(price)
+    fun `call bill with payAmount null return empty`() {
+        val payAmount = null
+        val result = viewModel.bill(payAmount)
         val expected = ""
         assertEquals(expected, result)
     }
 
     @Test
-    fun `call bill with price 0 return Free`() {
-        val price = 0
-        val result = vm.bill(price)
+    fun `call bill with payAmount 0 return Free`() {
+        val payAmount = 0
+        val result = viewModel.bill(payAmount)
         val expected = "Free"
         assertEquals(expected, result)
     }
 
     @Test
-    fun `call bill with price negative return Error`() {
-        val price = -100
-        val result = vm.bill(price)
+    fun `call bill with payAmount negative return Error`() {
+        val payAmount = -100
+        val result = viewModel.bill(payAmount)
         val expected = "Error"
         assertEquals(expected, result)
     }
 
     @Test
-    fun `call bill with price positive return result`() {
-        val price = 1
-        val result = vm.bill(price)
-        val expected = "Cái giá phải trả: ${price.formatNumberPrice()}"
+    fun `call bill with payAmount positive return result`() {
+        val payAmount = 1
+        val result = viewModel.bill(payAmount)
+        val expected = "Cái giá phải trả: ${payAmount.formatNumberPrice()}"
         assertEquals(expected, result)
     }
 
@@ -57,12 +57,12 @@ class ExerciseOneViewModelTest {
         val voucher = false
         val beers = 0
         val expected = 0
-        vm.calculatorTotalAmount(
+        viewModel.calculatorTotalAmount(
             hour = hour,
             voucher = voucher,
             beersAmount = beers
         )
-        assertEquals(expected, vm.total.value)
+        assertEquals(expected, viewModel.total.value)
     }
 
     @Test
@@ -71,12 +71,12 @@ class ExerciseOneViewModelTest {
         val voucher = true
         val beers = 0
         val expected = 0
-        vm.calculatorTotalAmount(
+        viewModel.calculatorTotalAmount(
             hour = hour,
             voucher = voucher,
             beersAmount = beers
         )
-        assertEquals(expected, vm.total.value)
+        assertEquals(expected, viewModel.total.value)
     }
 
     @Test
@@ -85,12 +85,12 @@ class ExerciseOneViewModelTest {
         val voucher = false
         val beers = 2
         val expected = ExerciseOneViewModel.PRICE_AT_SALE_TIME * 2
-        vm.calculatorTotalAmount(
+        viewModel.calculatorTotalAmount(
             hour = hour,
             voucher = voucher,
             beersAmount = beers
         )
-        assertEquals(expected, vm.total.value)
+        assertEquals(expected, viewModel.total.value)
     }
 
     @Test
@@ -100,12 +100,12 @@ class ExerciseOneViewModelTest {
         val beers = 2
         val expected =
             ExerciseOneViewModel.PRICE_WITH_VOUCHER + ExerciseOneViewModel.PRICE_AT_SALE_TIME
-        vm.calculatorTotalAmount(
+        viewModel.calculatorTotalAmount(
             hour = hour,
             voucher = voucher,
             beersAmount = beers
         )
-        assertEquals(expected, vm.total.value)
+        assertEquals(expected, viewModel.total.value)
     }
 
     @Test
@@ -114,12 +114,12 @@ class ExerciseOneViewModelTest {
         val voucher = false
         val beers = 2
         val expected = ExerciseOneViewModel.REGULAR_PRICE * 2
-        vm.calculatorTotalAmount(
+        viewModel.calculatorTotalAmount(
             hour = hour,
             voucher = voucher,
             beersAmount = beers
         )
-        assertEquals(expected, vm.total.value)
+        assertEquals(expected, viewModel.total.value)
     }
 
     @Test
@@ -128,11 +128,11 @@ class ExerciseOneViewModelTest {
         val voucher = true
         val beers = 2
         val expected = ExerciseOneViewModel.PRICE_WITH_VOUCHER + ExerciseOneViewModel.REGULAR_PRICE
-        vm.calculatorTotalAmount(
+        viewModel.calculatorTotalAmount(
             hour = hour,
             voucher = voucher,
             beersAmount = beers
         )
-        assertEquals(expected, vm.total.value)
+        assertEquals(expected, viewModel.total.value)
     }
 }
