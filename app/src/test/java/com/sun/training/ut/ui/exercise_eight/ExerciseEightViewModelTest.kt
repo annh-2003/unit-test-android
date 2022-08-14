@@ -72,7 +72,17 @@ class ExerciseEightViewModelTest {
     }
 
     @Test
-    fun `call checkFee with day is Tuesday, age in 0 to 120`() {
+    fun `call checkFee with age in 0 to 12`() {
+        val day = "Tuesday"
+        val age = 10
+        val female = false
+        val expectTicketPrice = ExerciseEightViewModel.REGULAR_PRICE / 2
+        viewModel.checkFee(day, female, age)
+        assertEquals(expectTicketPrice, viewModel.ticketFee.value)
+    }
+
+    @Test
+    fun `call checkFee with day is Tuesday, age in 13 to 120`() {
         val day = "Tuesday"
         val age = 100
         val female = false
@@ -137,16 +147,6 @@ class ExerciseEightViewModelTest {
         val age = 65
         val female = true
         val expectTicketPrice = ExerciseEightViewModel.REGULAR_PRICE
-        viewModel.checkFee(day, female, age)
-        assertEquals(expectTicketPrice, viewModel.ticketFee.value)
-    }
-
-    @Test
-    fun `call checkFee with day not Tuesday, age in 0 to 12`() {
-        val day = "Monday"
-        val age = 10
-        val female = false
-        val expectTicketPrice = ExerciseEightViewModel.REGULAR_PRICE / 2
         viewModel.checkFee(day, female, age)
         assertEquals(expectTicketPrice, viewModel.ticketFee.value)
     }

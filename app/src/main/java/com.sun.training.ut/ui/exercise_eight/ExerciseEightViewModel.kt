@@ -27,8 +27,8 @@ class ExerciseEightViewModel : BaseViewModel() {
             ticketFee.value = -1
             return
         }
-        ticketFee.value = if (dayOfWeek == "Tuesday") TUESDAY_PRICE
-        else if (age < CHILD_AGE) REGULAR_PRICE / 2
+        ticketFee.value = if (age < CHILD_AGE) REGULAR_PRICE / 2
+        else if (dayOfWeek == "Tuesday") TUESDAY_PRICE
         else if (dayOfWeek == "Friday" && female) WOMAN_FRIDAY_PRICE
         else if (age > OLDER_AGE) OLDER_PRICE
         else REGULAR_PRICE

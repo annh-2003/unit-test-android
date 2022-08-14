@@ -8,6 +8,7 @@ import com.sun.training.ut.databinding.ActivityExerciseEightBinding
 import com.sun.training.ut.ui.base.BaseActivity
 import org.koin.android.viewmodel.ext.android.viewModel
 import android.widget.ArrayAdapter
+import com.sun.training.ut.setNumberInputWithoutMultiZero
 
 
 class ExerciseEightActivity : BaseActivity<ActivityExerciseEightBinding, ExerciseEightViewModel>() {
@@ -28,6 +29,7 @@ class ExerciseEightActivity : BaseActivity<ActivityExerciseEightBinding, Exercis
         )
         viewBinding.apply {
             pickDay.adapter = adapter
+            inputAge.setNumberInputWithoutMultiZero()
             btnCalculate.setOnClickListener {
                 viewModel?.checkFee(
                     dayOfWeek = pickDay.selectedItem.toString(),

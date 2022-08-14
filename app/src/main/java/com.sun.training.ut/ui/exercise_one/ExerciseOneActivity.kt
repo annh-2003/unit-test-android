@@ -5,6 +5,7 @@ import com.sun.training.ut.BR
 import com.sun.training.ut.R
 import com.sun.training.ut.databinding.ActivityExerciseOneBinding
 import com.sun.training.ut.getHourWithBuildVersion
+import com.sun.training.ut.setNumberInputWithoutMultiZero
 import com.sun.training.ut.ui.base.BaseActivity
 import org.koin.android.viewmodel.ext.android.viewModel
 
@@ -19,6 +20,7 @@ class ExerciseOneActivity : BaseActivity<ActivityExerciseOneBinding, ExerciseOne
         viewBinding.lifecycleOwner = this
         viewBinding.apply {
             pickerTimeOrder.setIs24HourView(true)
+            inputBearsNumber.setNumberInputWithoutMultiZero()
             btnCalculate.setOnClickListener {
                 viewModel?.calculatorTotalAmount(
                     hour = pickerTimeOrder.getHourWithBuildVersion(),
