@@ -5,7 +5,7 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/tvNameSanPham"
+        android:id="@+id/tvNameProduct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -27,24 +27,24 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <TextView
-        android:id="@+id/tvSoTien"
+        android:id="@+id/tvMonney"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
-        app:layout_constraintBottom_toBottomOf="@id/tvNameSanPham"
+        app:layout_constraintBottom_toBottomOf="@id/tvNameProduct"
         app:layout_constraintEnd_toEndOf="@id/guideline_8"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@id/guideline_5"
-        app:layout_constraintTop_toTopOf="@id/tvNameSanPham" />
+        app:layout_constraintTop_toTopOf="@id/tvNameProduct" />
 
     <TextView
         android:id="@+id/tvCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/tvNameSanPham"
+        app:layout_constraintBottom_toBottomOf="@id/tvNameProduct"
         app:layout_constraintEnd_toStartOf="@id/guideline_9"
         app:layout_constraintStart_toEndOf="@id/guideline_8"
-        app:layout_constraintTop_toTopOf="@id/tvNameSanPham" />
+        app:layout_constraintTop_toTopOf="@id/tvNameProduct" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_8"
@@ -58,10 +58,10 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:background="@drawable/ic_add"
-        app:layout_constraintBottom_toBottomOf="@id/tvNameSanPham"
+        app:layout_constraintBottom_toBottomOf="@id/tvNameProduct"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/guideline_9"
-        app:layout_constraintTop_toTopOf="@id/tvNameSanPham" />
+        app:layout_constraintTop_toTopOf="@id/tvNameProduct" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_9"

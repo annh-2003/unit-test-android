@@ -38,44 +38,44 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/btnXemHang"
+            android:id="@+id/btnViewProduct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:text="Xem hàng"
-            app:layout_constraintEnd_toEndOf="@id/btnTinhTien"
+            app:layout_constraintEnd_toEndOf="@id/btnCalculateMoney"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/listView" />
 
         <Button
-            android:id="@+id/btnTinhTien"
+            android:id="@+id/btnCalculateMoney"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tính Tiền"
-            app:layout_constraintBottom_toBottomOf="@id/btnXemHang"
+            app:layout_constraintBottom_toBottomOf="@id/btnViewProduct"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/btnXemHang"
-            app:layout_constraintTop_toTopOf="@id/btnXemHang" />
+            app:layout_constraintStart_toStartOf="@id/btnViewProduct"
+            app:layout_constraintTop_toTopOf="@id/btnViewProduct" />
 
         <TextView
-            android:id="@+id/tvTongTien"
+            android:id="@+id/tvTotalMonney"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text=""
+            android:text="Tổng tiền"
             android:textSize="26sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnXemHang" />
+            app:layout_constraintTop_toBottomOf="@+id/btnViewProduct" />
 
         <TextView
-            android:id="@+id/tvKqTongTien"
+            android:id="@+id/tvResultTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@id/tvTongTien"
+            app:layout_constraintBottom_toBottomOf="@id/tvTotalMonney"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/tvTongTien"
-            app:layout_constraintTop_toTopOf="@id/tvTongTien" />
+            app:layout_constraintStart_toEndOf="@id/tvTotalMonney"
+            app:layout_constraintTop_toTopOf="@id/tvTotalMonney" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

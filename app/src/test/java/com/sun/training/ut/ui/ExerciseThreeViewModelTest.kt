@@ -75,7 +75,7 @@ class ExerciseThreeViewModelTest {
     @Test
     fun `test check Handle Data AmountProduct equal or greater 7 onSuccess`() {
         val result = 3194550
-        mListsanPham.addAll(ListProduct.getListProductTESTONE())
+        mListsanPham.addAll(ListProduct.getListProductTestCaseOne())
         val actual = viewModel.handleData(false , false ,true)
         assertEquals(result, actual)
     }
@@ -83,7 +83,7 @@ class ExerciseThreeViewModelTest {
     @Test
     fun `test check Handle Data AmountProduct equal or greater 7  onFail`() {
         val result = 2
-        mListsanPham.addAll(ListProduct.getListProductTESTONE())
+        mListsanPham.addAll(ListProduct.getListProductTestCaseOne())
         val actual = viewModel.handleData(false , false ,true)
         assertFalse(result == actual)
     }
@@ -91,7 +91,7 @@ class ExerciseThreeViewModelTest {
     @Test
     fun `test check Handle Data meet the condition of 5 percent discount onSuccess`() {
         val result = 560500
-        mListsanPham.addAll(ListProduct.getListProductTESTTWO())
+        mListsanPham.addAll(ListProduct.getListProductTestCaseTwo())
         val actual = viewModel.handleData(true , true ,false)
         assertEquals(result, actual)
     }
@@ -99,7 +99,7 @@ class ExerciseThreeViewModelTest {
     @Test
     fun `test check Handle Data meet the condition of 5 percent discount onFail`() {
         val result = 560500
-        mListsanPham.addAll(ListProduct.getListProductTESTTWO())
+        mListsanPham.addAll(ListProduct.getListProductTestCaseTwo())
         val actual = viewModel.handleData(true , true ,false)
         assertFalse(result != actual)
     }
@@ -123,7 +123,7 @@ class ExerciseThreeViewModelTest {
     @Test
     fun `test check Handle Data conditions are not satisfied onSuccess`() {
         val result = 1905000
-        mListsanPham.addAll(ListProduct.getListProductFOUR())
+        mListsanPham.addAll(ListProduct.getListProductTestCaseFour())
         val actual = viewModel.handleData(false , false ,false)
         assertEquals(result, actual)
     }
@@ -131,7 +131,7 @@ class ExerciseThreeViewModelTest {
     @Test
     fun `test check Handle Data conditions are not satisfied onFail`() {
         val result = 1905000
-        mListsanPham.addAll(ListProduct.getListProductFOUR())
+        mListsanPham.addAll(ListProduct.getListProductTestCaseFour())
         val actual = viewModel.handleData(false , false ,false)
         assertFalse(result != actual)
     }
@@ -147,8 +147,8 @@ class ExerciseThreeViewModelTest {
     @Test
     fun `test check Handle get Monney onFail`() {
         val result = 3695000
-        mListsanPham.addAll(ListProduct.getListProduct())
+        mListsanPham.addAll(ListProduct.getListProductTestCaseTwo())
         val actual = viewModel.getMonney()
-        assertFalse(result != actual)
+        assertTrue(result != actual)
     }
 }

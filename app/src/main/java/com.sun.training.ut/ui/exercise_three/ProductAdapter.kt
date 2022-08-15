@@ -7,7 +7,7 @@ import com.sun.training.ut.databinding.ItemSanphamBinding
 
 class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
-    private val mListSanPham = mutableListOf<Product>()
+    private val mListProduct = mutableListOf<Product>()
     var clickAddCount : ((Int) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
@@ -16,15 +16,15 @@ class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() 
     }
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
-        holder.bind(mListSanPham[position] , position)
+        holder.bind(mListProduct[position] , position)
     }
 
     override fun getItemCount(): Int {
-        return mListSanPham.size
+        return mListProduct.size
     }
 
     fun setList(listSanPham: List<Product>) {
-        mListSanPham.apply {
+        mListProduct.apply {
             clear()
             addAll(listSanPham)
             notifyDataSetChanged()
@@ -35,8 +35,8 @@ class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() 
         val viewBinding : ItemSanphamBinding): RecyclerView.ViewHolder(viewBinding.root) {
         fun bind(sanPham: Product, position: Int) {
             viewBinding.apply {
-                tvNameSanPham.text = sanPham.nameOfProduct
-                tvSoTien.text = sanPham.priceOfProduct.toString()
+                tvNameProduct.text = sanPham.nameOfProduct
+                tvMonney.text = sanPham.priceOfProduct.toString()
                 tvCount.text = sanPham.countOfProduct.toString()
                 imgAddCount.setOnClickListener {
                     clickAddCount?.invoke(position)

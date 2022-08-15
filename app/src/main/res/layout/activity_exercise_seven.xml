@@ -16,11 +16,122 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="10dp"
             tools:context=".ui.exercise_seven.ExerciseSevenActivity">
 
+            <TextView
+                android:id="@+id/tvInputMonney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Input Monney Product"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edtMonneyProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Enter monney product"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvInputMonney" />
+
+            <TextView
+                android:id="@+id/tvTypeClient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Type client"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtMonneyProduct" />
+
+            <RadioGroup
+                android:id="@+id/radioGruopTypeClient"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/tvTypeClient"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvTypeClient"
+                app:layout_constraintTop_toTopOf="@id/tvTypeClient">
+
+                <RadioButton
+                    android:checked="true"
+                    android:id="@+id/radioClientNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal" />
+
+                <RadioButton
+                    android:id="@+id/radioClientPremium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Premium" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTypeTransport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Type Transport"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTypeClient" />
+
+            <RadioGroup
+                android:id="@+id/radioGruopTypeTransport"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/tvTypeTransport"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvTypeTransport"
+                app:layout_constraintTop_toBottomOf="@id/radioGruopTypeClient"
+                app:layout_constraintTop_toTopOf="@id/tvTypeTransport">
+
+                <RadioButton
+                    android:checked="true"
+                    android:id="@+id/radioTransportNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal" />
+
+                <RadioButton
+                    android:id="@+id/radioTransportSuperSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Super Speed" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnTotalMonney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Total transport fee"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTypeTransport" />
+
+            <TextView
+                android:id="@+id/tvResultTotalTransportFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/btnTotalMonney"
+                app:layout_constraintStart_toEndOf="@id/btnTotalMonney"
+                app:layout_constraintTop_toTopOf="@id/btnTotalMonney" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

@@ -42,14 +42,14 @@ class ExerciseThreeViewModel : BaseViewModel() {
 
     fun checkAoSoMi(): Boolean {
         for (i in mListProduct) {
-            return i.id == NUMBER_ZERO
+            if(i.id == NUMBER_ZERO) return true
         }
         return false
     }
 
     fun checkCaVat(): Boolean {
         for (i in mListProduct) {
-            return i.id == NUMBER_ONE
+            if(i.id == NUMBER_ONE) return true
         }
         return false
     }
@@ -63,10 +63,10 @@ class ExerciseThreeViewModel : BaseViewModel() {
         return monney
     }
 
-    fun handleData(isCheckAOSOMI : Boolean, isCheckCAVAT : Boolean, isCheckAMOUNT  : Boolean ): Int{
-        return if (!isCheckAOSOMI && !isCheckCAVAT && isCheckAMOUNT) (getMonney() / NUMBER_A_HUNDRED) * NUMBER_NINETY_THREE
-        else if (isCheckAOSOMI && isCheckCAVAT && !isCheckAMOUNT) (getMonney() / NUMBER_A_HUNDRED) * NUMBER_NINETY_FIVE
-        else if (isCheckAOSOMI && isCheckCAVAT && isCheckAMOUNT) (getMonney() / NUMBER_A_HUNDRED) * NUMBER_EIGHTY_EIGHT
+    fun handleData(isCheckAoSoMi : Boolean, isCheckCavat : Boolean, isCheckAmount : Boolean ): Int{
+        return if (!isCheckAoSoMi && !isCheckCavat && isCheckAmount) (getMonney() / NUMBER_A_HUNDRED) * NUMBER_NINETY_THREE
+        else if (isCheckAoSoMi && isCheckCavat && !isCheckAmount) (getMonney() / NUMBER_A_HUNDRED) * NUMBER_NINETY_FIVE
+        else if (isCheckAoSoMi && isCheckCavat && isCheckAmount) (getMonney() / NUMBER_A_HUNDRED) * NUMBER_EIGHTY_EIGHT
         else  getMonney()
     }
 
