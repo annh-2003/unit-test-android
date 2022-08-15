@@ -8,7 +8,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
-class ExerciseFourViewModel {
+class ExerciseFourViewModelTest {
     @Rule
     @JvmField
     val instantTaskExecutorRule = InstantTaskExecutorRule()
@@ -21,35 +21,35 @@ class ExerciseFourViewModel {
     }
 
     @Test
-    fun `testDayChosen with holiday success`(){
+    fun `testDayChosen with_holiday red`(){
         val day = "Mon, 01 Aug 2022"
         viewModel.rule(day)
         assertEquals(RuleColor.RED, viewModel.color.value)
     }
 
     @Test
-    fun `testDayChosen with holiday on Saturday success`(){
+    fun `testDayChosen with_holiday_on_saturday red`(){
         val day = "Sat, 13 Aug 2022"
         viewModel.rule(day)
         assertEquals(RuleColor.RED, viewModel.color.value)
     }
 
     @Test
-    fun `testDayChosen with saturday success`(){
+    fun `testDayChosen with_normal_saturday green`(){
         val day = "Sat, 06 Aug 2022"
         viewModel.rule(day)
         assertEquals(RuleColor.GREEN, viewModel.color.value)
     }
 
     @Test
-    fun `testDayChosen with sunday success`(){
+    fun `testDayChosen with_sunday red`(){
         val day = "Sun, 07 Aug 2022"
         viewModel.rule(day)
         assertEquals(RuleColor.RED, viewModel.color.value)
     }
 
     @Test
-    fun `testDayChosen with normal day success`(){
+    fun `testDayChosen with_normal_day black`(){
         val day = "Wed, 10 Aug 2022"
         viewModel.rule(day)
         assertEquals(RuleColor.BLACK, viewModel.color.value)

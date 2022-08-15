@@ -1,43 +1,49 @@
 package com.sun.training.ut.ui.exercise_nine
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.sun.training.ut.ui.base.BaseViewModel
 
 class ExerciseNineViewModel : BaseViewModel() {
-    val duaPhep = MutableLiveData(false)
-    val quanSu = MutableLiveData(false)
-    val chiaKhoaBongDem = MutableLiveData(false)
-    val kiemAnhSang = MutableLiveData(false)
+    val magicChopstick = MutableLiveData(false)
+    val tactician = MutableLiveData(false)
+    val darknessKey = MutableLiveData(false)
+    val sword = MutableLiveData(false)
     val message = MutableLiveData<String>()
 
-    fun duaPhepState(b: Boolean){
-        duaPhep.value = b
+    fun magicChopstickState(b: Boolean){
+        magicChopstick.value = b
     }
 
-    fun quanSuState(b: Boolean){
-        quanSu.value = b
+    fun tacticianState(b: Boolean){
+        tactician.value = b
     }
 
-    fun chiaKhoaBongDemState(b: Boolean){
-        chiaKhoaBongDem.value = b
+    fun darknessKey(b: Boolean){
+        darknessKey.value = b
     }
 
-    fun kiemAnhSangState(b: Boolean){
-        kiemAnhSang.value = b
+    fun swordState(b: Boolean){
+        sword.value = b
     }
 
     fun attackBoss(){
-        if (isHaveDuaPhepOrQuanSu() && chiaKhoaBongDem.value!! && kiemAnhSang.value!!) message.value = "Danh bai boss thanh cong!"
-        else if (isHaveDuaPhepOrQuanSu() && !chiaKhoaBongDem.value!! && !kiemAnhSang.value!!) message.value = "Thieu chia khoa bong dem & kiem anh sang de danh boss"
-        else if (isHaveDuaPhepOrQuanSu() && chiaKhoaBongDem.value!! && !kiemAnhSang.value!!) message.value = "Thieu kiem anh sang de danh boss"
-        else if (isHaveDuaPhepOrQuanSu() && !chiaKhoaBongDem.value!! && kiemAnhSang.value!!) message.value = "Thieu chia khoa bong dem de danh boss"
-        else if (!isHaveDuaPhepOrQuanSu() && chiaKhoaBongDem.value!! && !kiemAnhSang.value!!) message.value = "Thieu kiem anh sang & dua phep hoac quan su de danh boss"
-        else if (!isHaveDuaPhepOrQuanSu() && !chiaKhoaBongDem.value!! && kiemAnhSang.value!!) message.value = "Thieu chia khoa bong dem & dua phep hoac quan su de danh boss"
-        else if (!isHaveDuaPhepOrQuanSu() && chiaKhoaBongDem.value!! && kiemAnhSang.value!!) message.value = "Thieu dua phep hoac quan su de danh boss"
+        if (isHaveMagicChopstickOrTactician() && isHaveDarknessKeyAndSword()) message.value = "Danh bai boss thanh cong!"
+        else if (isHaveMagicChopstickOrTactician() && isNotHaveDarknessKeyAndSword()) message.value = "Thieu chia khoa bong dem & kiem anh sang de danh boss"
+        else if (isHaveMagicChopstickOrTactician() && isHaveDarknessKeyAndNotSword()) message.value = "Thieu kiem anh sang de danh boss"
+        else if (isHaveMagicChopstickOrTactician() && isNotDarknessKeyAndHaveSword()) message.value = "Thieu chia khoa bong dem de danh boss"
+        else if (!isHaveMagicChopstickOrTactician() && isHaveDarknessKeyAndNotSword()) message.value = "Thieu kiem anh sang & dua phep hoac quan su de danh boss"
+        else if (!isHaveMagicChopstickOrTactician() && isNotDarknessKeyAndHaveSword()) message.value = "Thieu chia khoa bong dem & dua phep hoac quan su de danh boss"
+        else if (!isHaveMagicChopstickOrTactician() && isHaveDarknessKeyAndSword()) message.value = "Thieu dua phep hoac quan su de danh boss"
         else message.value = "Ban khong co item nao de danh boss"
-
     }
 
-    fun isHaveDuaPhepOrQuanSu():Boolean = duaPhep.value!! || quanSu.value!!
+    private fun isHaveMagicChopstickOrTactician():Boolean = magicChopstick.value!! || tactician.value!!
+
+    private fun isHaveDarknessKeyAndSword(): Boolean = darknessKey.value!! && sword.value!!
+
+    private fun isNotHaveDarknessKeyAndSword(): Boolean = !darknessKey.value!! && !sword.value!!
+
+    private fun isHaveDarknessKeyAndNotSword(): Boolean = darknessKey.value!! && !sword.value!!
+
+    private fun isNotDarknessKeyAndHaveSword(): Boolean = !darknessKey.value!! && sword.value!!
 }
