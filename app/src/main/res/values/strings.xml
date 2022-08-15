@@ -91,4 +91,9 @@
 
     <string name="title_exercise_ten">Exercise Ten</string>
     <string name="title_exercise_10">Exercise 10</string>
+    <string name="string_title"><![CDATA[Trong Roll Playing Game "Hanoi quest", để dũng sĩ Bánh Mì có thể đánh 「Big Boss」hùng mạnh, cần phải hoàn thành rất nhiều điều kiện.]]></string>
+    <string name="string_condition">● Điều kiện tiên quyết：</string>
+    <string name="string_condition1"><![CDATA[①：Để tìm được căn phòng nơi có Big Boss, cần mang theo công cụ là "Đũa phép" hoặc là cần có "Quân sư" làm bạn đồng hành ]]></string>
+    <string name="string_condition2"><![CDATA[②：Khi vào trong phòng có Big Boss , cần mang theo công cụ là "Chìa khoá bóng đêm". ]]></string>
+    <string name="string_condition3"><![CDATA[③：Để đánh bại Big Boss, dũng sĩ Bánh Mì cần phải mang theo vũ khí là "Kiếm ánh sáng" ]]></string>
 </resources>

@@ -14,12 +14,135 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".ui.exercise_nine.ExerciseNineActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_20sdp"
+        tools:context=".ui.exercise_nine.ExerciseNineActivity">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/string_condition"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <TextView
+            android:id="@+id/tvCondition1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/string_condition1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCondition" />
+
+        <TextView
+            android:id="@+id/tvCondition2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/string_condition2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCondition1" />
+
+        <TextView
+            android:id="@+id/tvCondition3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/string_condition3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCondition2" />
+
+        <CheckBox
+            android:id="@+id/cbDuaPhep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="@{viewModel.magicChopstick}"
+            android:onCheckedChanged="@{(compoundButton, isChecked) -> viewModel.magicChopstickState(isChecked)}"
+            android:text="Dua Phep"
+            app:layout_constraintTop_toBottomOf="@id/tvCondition3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/cbQuanSu"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+        <CheckBox
+            android:id="@+id/cbQuanSu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="@{viewModel.tactician}"
+            android:onCheckedChanged="@{(compoundButton, isChecked) -> viewModel.tacticianState(isChecked)}"
+            android:text="Quan Su"
+            tools:layout_editor_absoluteX="65dp"
+            tools:layout_editor_absoluteY="262dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cbDuaPhep"
+            app:layout_constraintTop_toTopOf="@id/cbDuaPhep"/>
+
+        <CheckBox
+            android:id="@+id/cbChiaKhoaBongDem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="@{viewModel.darknessKey}"
+            android:onCheckedChanged="@{(compoundButton, isChecked) -> viewModel.darknessKey(isChecked)}"
+            android:text="Chia Khoa Bong Dem"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cbDuaPhep"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toStartOf="@id/cbKiemAnhSang"/>
+
+        <CheckBox
+            android:id="@+id/cbKiemAnhSang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="@{viewModel.sword}"
+            android:onCheckedChanged="@{(compoundButton, isChecked) -> viewModel.swordState(isChecked)}"
+            android:text="Kiem Anh Sang"
+            app:layout_constraintTop_toTopOf="@id/cbChiaKhoaBongDem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cbChiaKhoaBongDem"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAttack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attack"
+            android:onClick="@{() -> viewModel.attackBoss()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cbChiaKhoaBongDem"
+            android:layout_marginTop="@dimen/_30sdp"/>
+
+        <TextView
+            android:id="@+id/tvNotify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@{viewModel.message}"
+            app:layout_constraintTop_toBottomOf="@id/btnAttack"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_16sdp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </layout>
