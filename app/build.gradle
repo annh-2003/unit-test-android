@@ -91,6 +91,10 @@ android {
         }
     }
     dynamicFeatures = [':exercise_ten']
+
+    sourceSets{
+        androidTest { java.srcDirs = ['src/androidTest/java'] }
+    }
 }
 
 dependencies {
@@ -102,6 +106,9 @@ dependencies {
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test.ext:junit:$ext_junit_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_core_version"
+    androidTestImplementation project(path: ':app')
+    testImplementation "androidx.test:core-ktx:1.4.0"
+    androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
 
     implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
 
@@ -142,4 +149,6 @@ dependencies {
 
     // For Kotlin users also import the Kotlin extensions library for Play Core:
     implementation 'com.google.android.play:core-ktx:1.8.1'
+
+    testImplementation "androidx.test.ext:junit-ktx:1.1.3"
 }

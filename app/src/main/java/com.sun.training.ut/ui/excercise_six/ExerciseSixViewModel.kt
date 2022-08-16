@@ -8,6 +8,7 @@ const val FIRST_FREE_TIME = 60
 const val SECOND_MONEY_POINT = 5000
 const val SECOND_FREE_TIME = 120
 const val WATCH_MOVIE_FREE_TIME = 180
+const val ZERO = 0
 
 /**
 ◎Exercise
@@ -21,6 +22,25 @@ Các điều kiện được ghi ở bên dưới:
 ③：Nếu khách hàng có xem phim, miễn phí gửi xe thêm 180 phút, cộng bổ sung vào cùng với tổng số tiền mua sắm.
  */
 class ExerciseSixViewModel : BaseViewModel() {
+    val parkingFreeTime = MutableLiveData(0)
 
+    var purchased : Int? = 0
+    var isWatchMovie = false
+
+    fun calculateParkingFreeTime() {
+        parkingFreeTime.value = purchased?.let {
+            var freeParking = ZERO
+            freeParking = when {
+                it < FIRST_MONEY_POINT -> ZERO
+                it < SECOND_MONEY_POINT -> FIRST_FREE_TIME
+                else -> SECOND_FREE_TIME
+            }
+
+            if(isWatchMovie) {
+                freeParking += WATCH_MOVIE_FREE_TIME
+            }
+            freeParking
+        } ?: ZERO
+    }
 
 }
